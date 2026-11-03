@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetry Review Task</title>
+    <!-- Tailwind CSS for Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f8fafc;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .essay-font {
+            font-family: 'Merriweather', serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #c084fc; 
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #9333ea; 
+        }
+    </style>
+</head>
+<body class="text-slate-800 min-h-screen flex flex-col">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-purple-900 via-purple-800 to-indigo-900 text-white py-8 shadow-lg border-b-4 border-yellow-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+            <div class="absolute top-0 left-4 bg-yellow-500 text-purple-900 text-xs font-bold px-3 py-1 rounded-b-lg shadow-md uppercase tracking-wider">
+                English Advanced Grade XI
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-4 mb-2 drop-shadow-md">
+                Poetry Review Task
+            </h1>
+            <p class="text-purple-200 text-lg max-w-2xl mx-auto font-medium italic">
+                Review • Analyze • Evaluate
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Left Column: Interactive Form (7 cols) -->
+            <div class="lg:col-span-7 space-y-6">
+                
+                <div class="bg-white rounded-2xl shadow-xl border border-purple-100 overflow-hidden">
+                    <div class="bg-purple-100 px-6 py-4 border-b border-purple-200 flex items-center gap-3">
+                        <div class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                              <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                              <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-purple-900">Write Your Review</h2>
+                    </div>
+                    
+                    <div class="p-6 space-y-6 bg-slate-50">
+                        
+                        <!-- Student Info -->
+                        <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 focus-within:ring-2 focus-within:ring-purple-400 transition-all flex flex-col md:flex-row gap-4">
+                            <div class="flex-1">
+                                <label for="student-name" class="block text-sm font-bold text-slate-800 mb-1">Student Name</label>
+                                <input type="text" id="student-name" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500" placeholder="e.g., John Doe">
+                            </div>
+                            <div class="w-full md:w-1/3">
+                                <label for="student-class" class="block text-sm font-bold text-slate-800 mb-1">Class</label>
+                                <input type="text" id="student-class" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500" placeholder="e.g., XI Science 1">
+                            </div>
+                        </div>
+
+                        <!-- Step 1: Title -->
+                        <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 focus-within:ring-2 focus-within:ring-purple-400 transition-all">
+                            <label for="title" class="flex items-center gap-2 text-lg font-bold text-slate-800 mb-2">
+                                <span class="bg-yellow-400 text-yellow-900 rounded-full w-6 h-6 flex items-center justify-center text-sm">1</span> 
+                                Title of the Review
+                            </label>
+                            <p class="text-sm text-slate-500 mb-3 ml-8">Provide a clear and interesting title for your review.</p>
+                            <input type="text" id="title" class="w-full ml-8 max-w-[90%] px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 essay-font text-lg" placeholder="e.g., Finding Hope in the Dark: A Review of...">
+                        </div>
+
+                        <!-- Step 2: Introduction -->
+                        <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 focus-within:ring-2 focus-within:ring-purple-400 transition-all">
+                            <label for="introduction" class="flex items-center gap-2 text-lg font-bold text-slate-800 mb-2">
+                                <span class="bg-yellow-400 text-yellow-900 rounded-full w-6 h-6 flex items-center justify-center text-sm">2</span> 
+                                Introduction <span class="text-sm font-normal text-slate-500">(± 2-3 sentences)</span>
+                            </label>
+                            <p class="text-sm text-slate-500 mb-3 ml-8">Introduce the poem (title and poet) and give a brief general statement about it.</p>
+                            <textarea id="introduction" rows="3" class="w-full ml-8 max-w-[90%] px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 custom-scrollbar essay-font" placeholder="In the poem [Title] by [Poet], the speaker explores..."></textarea>
+                        </div>
+
+                        <!-- Step 3: Body (Main Review) -->
+                        <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 focus-within:ring-2 focus-within:ring-purple-400 transition-all relative overflow-hidden">
+                            <div class="absolute top-0 right-0 bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-bl-lg font-bold">Heaviest Weight</div>
+                            <label class="flex items-center gap-2 text-lg font-bold text-slate-800 mb-2">
+                                <span class="bg-yellow-400 text-yellow-900 rounded-full w-6 h-6 flex items-center justify-center text-sm">3</span> 
+                                Body (Main Review) <span class="text-sm font-normal text-slate-500">(± 2 paragraphs)</span>
+                            </label>
+                            
+                            <div class="ml-8 max-w-[90%] space-y-4">
+                                <div>
+                                    <label for="body1" class="block text-sm font-bold text-purple-700 mb-1">Paragraph 1: Theme & Message</label>
+                                    <textarea id="body1" rows="4" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 custom-scrollbar essay-font" placeholder="Analyze and discuss the core theme and the message the poet is conveying..."></textarea>
+                                </div>
+                                <div>
+                                    <label for="body2" class="block text-sm font-bold text-purple-700 mb-1">Paragraph 2: Figurative Language & Poetic Style</label>
+                                    <p class="text-xs text-slate-500 mb-2">Mention and explain at least 2 examples with lines. Discuss rhyme, rhythm, tone, or stanza.</p>
+                                    <textarea id="body2" rows="5" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 custom-scrollbar essay-font" placeholder="The poet effectively employs metaphors, such as..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Evaluation -->
+                        <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 focus-within:ring-2 focus-within:ring-purple-400 transition-all">
+                            <label for="evaluation" class="flex items-center gap-2 text-lg font-bold text-slate-800 mb-2">
+                                <span class="bg-yellow-400 text-yellow-900 rounded-full w-6 h-6 flex items-center justify-center text-sm">4</span> 
+                                Evaluation <span class="text-sm font-normal text-slate-500">(± 1 paragraph)</span>
+                            </label>
+                            <p class="text-sm text-slate-500 mb-3 ml-8">Give your opinion about the poem. Mention its strengths and, if any, its weaknesses.</p>
+                            <textarea id="evaluation" rows="4" class="w-full ml-8 max-w-[90%] px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 custom-scrollbar essay-font" placeholder="Overall, the poem strongly resonates because... However, one weakness might be..."></textarea>
+                        </div>
+
+                        <!-- Step 5: Conclusion -->
+                        <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 focus-within:ring-2 focus-within:ring-purple-400 transition-all">
+                            <label for="conclusion" class="flex items-center gap-2 text-lg font-bold text-slate-800 mb-2">
+                                <span class="bg-yellow-400 text-yellow-900 rounded-full w-6 h-6 flex items-center justify-center text-sm">5</span> 
+                                Conclusion <span class="text-sm font-normal text-slate-500">(± 1-2 sentences)</span>
+                            </label>
+                            <p class="text-sm text-slate-500 mb-3 ml-8">Summarize your overall impression and what you learned from the poem.</p>
+                            <textarea id="conclusion" rows="3" class="w-full ml-8 max-w-[90%] px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 custom-scrollbar essay-font" placeholder="In conclusion, this poem beautifully captures..."></textarea>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Live Preview & Reference Cards (5 cols) -->
+            <div class="lg:col-span-5 space-y-6">
+                
+                <!-- Live Preview Panel -->
+                <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden sticky top-6">
+                    <div class="bg-slate-800 px-4 py-3 flex justify-between items-center">
+                        <h3 class="text-white font-bold flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                            Live Essay Preview
+                        </h3>
+                        <button onclick="copyToClipboard()" class="bg-purple-600 hover:bg-purple-500 text-white text-sm font-bold py-1.5 px-3 rounded shadow transition flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                            </svg>
+                            Copy Text
+                        </button>
+                    </div>
+                    
+                    <!-- Paper-like container -->
+                    <div class="p-6 md:p-8 bg-white text-slate-800 max-h-[500px] overflow-y-auto custom-scrollbar relative">
+                        <!-- Watermark -->
+                        <div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-48 w-48" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+
+                        <div id="essayContent" class="essay-font leading-relaxed text-sm md:text-base relative z-10 space-y-4 text-justify">
+                            <h2 id="prev-title" class="text-xl md:text-2xl font-bold text-center mb-2 text-slate-900">[Your Title Will Appear Here]</h2>
+                            
+                            <p id="prev-byline" class="text-center text-slate-500 italic mb-6 hidden">
+                                By <span id="prev-name" class="font-semibold text-slate-700">[Name]</span>, <span id="prev-class">[Class]</span>
+                            </p>
+                            
+                            <p id="prev-intro" class="indent-8 text-slate-400 italic">Introduction paragraph...</p>
+                            
+                            <p id="prev-body1" class="indent-8 text-slate-400 italic hidden">Body paragraph 1 (Theme)...</p>
+                            
+                            <p id="prev-body2" class="indent-8 text-slate-400 italic hidden">Body paragraph 2 (Figurative Language)...</p>
+                            
+                            <p id="prev-eval" class="indent-8 text-slate-400 italic hidden">Evaluation paragraph...</p>
+                            
+                            <p id="prev-concl" class="indent-8 text-slate-400 italic hidden">Conclusion paragraph...</p>
+                        </div>
+                        
+                        <!-- Toast Notification (Hidden by default) -->
+                        <div id="copyToast" class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded shadow-lg transform transition-transform duration-300 translate-y-20 opacity-0 z-50">
+                            ✓ Copied to clipboard!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reference Cards Container -->
+                <div class="grid grid-cols-1 gap-6">
+                    
+                    <!-- Writing Tips Card -->
+                    <div class="bg-amber-50 rounded-xl shadow border border-amber-200 p-5">
+                        <h3 class="flex items-center gap-2 font-bold text-amber-900 mb-3 text-lg border-b border-amber-200 pb-2">
+                            <span class="text-2xl">📌</span> Writing Tips
+                        </h3>
+                        <ul class="space-y-2 text-amber-900 text-sm">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Use <strong>clear and formal English</strong>.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Be <strong>objective and logical</strong>.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Support ideas with <strong>evidence from the poem</strong> (quotations/lines).</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Use <strong>appropriate vocabulary</strong> and correct grammar.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Assessment Rubric Card -->
+                    <div class="bg-purple-50 rounded-xl shadow border border-purple-200 p-5">
+                        <h3 class="flex items-center justify-between font-bold text-purple-900 mb-3 text-lg border-b border-purple-200 pb-2">
+                            <span class="flex items-center gap-2"><span class="text-2xl">🏆</span> Assessment Rubric</span>
+                            <span class="text-sm bg-purple-200 text-purple-800 px-2 py-1 rounded font-black">100 Pts</span>
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between items-center bg-white p-2 rounded border border-purple-100 shadow-sm">
+                                <span class="font-semibold flex items-center gap-2"><span class="text-lg">📖</span> Content & Analysis</span>
+                                <span class="font-bold text-purple-700">40 pts</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-white p-2 rounded border border-purple-100 shadow-sm">
+                                <span class="font-semibold flex items-center gap-2"><span class="text-lg">🔍</span> Evaluation (Critical Thinking)</span>
+                                <span class="font-bold text-purple-700">30 pts</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-white p-2 rounded border border-purple-100 shadow-sm">
+                                <span class="font-semibold flex items-center gap-2"><span class="text-lg">✏️</span> Organization & Coherence</span>
+                                <span class="font-bold text-purple-700">20 pts</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-white p-2 rounded border border-purple-100 shadow-sm">
+                                <span class="font-semibold flex items-center gap-2"><span class="text-lg">⭐</span> Language Use (Grammar & Diction)</span>
+                                <span class="font-bold text-purple-700">10 pts</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-6 text-center text-sm mt-auto">
+        <p>"Read, think, analyze, and share your ideas about a poem in your own words!"</p>
+    </footer>
+
+    <!-- JavaScript for Live Preview and Copy Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mapping Input IDs to Preview Element IDs
+            const fieldMap = {
+                'title': 'prev-title',
+                'introduction': 'prev-intro',
+                'body1': 'prev-body1',
+                'body2': 'prev-body2',
+                'evaluation': 'prev-eval',
+                'conclusion': 'prev-concl'
+            };
+
+            const defaultTexts = {
+                'title': '[Your Title Will Appear Here]',
+                'introduction': 'Introduction paragraph...',
+                'body1': 'Body paragraph 1 (Theme & Message)...',
+                'body2': 'Body paragraph 2 (Figurative Language & Style)...',
+                'evaluation': 'Evaluation paragraph...',
+                'conclusion': 'Conclusion paragraph...'
+            };
+
+            // Handle Name and Class separately for the combined byline
+            const nameInput = document.getElementById('student-name');
+            const classInput = document.getElementById('student-class');
+            const bylinePrev = document.getElementById('prev-byline');
+            const namePrev = document.getElementById('prev-name');
+            const classPrev = document.getElementById('prev-class');
+
+            function updateByline() {
+                const nameVal = nameInput.value.trim();
+                const classVal = classInput.value.trim();
+                
+                if (nameVal === '' && classVal === '') {
+                    bylinePrev.classList.add('hidden');
+                } else {
+                    bylinePrev.classList.remove('hidden');
+                    namePrev.textContent = nameVal ? nameVal : '[Name]';
+                    classPrev.textContent = classVal ? classVal : '[Class]';
+                }
+            }
+
+            nameInput.addEventListener('input', updateByline);
+            classInput.addEventListener('input', updateByline);
+
+            // Setup listeners
+            for (const [inputId, previewId] of Object.entries(fieldMap)) {
+                const inputElement = document.getElementById(inputId);
+                const previewElement = document.getElementById(previewId);
+
+                inputElement.addEventListener('input', (e) => {
+                    const val = e.target.value.trim();
+                    
+                    if (val === '') {
+                        previewElement.textContent = defaultTexts[inputId];
+                        previewElement.classList.add('text-slate-400', 'italic');
+                        previewElement.classList.remove('text-slate-800');
+                        
+                        // Keep intro visible as placeholder, hide others if empty to avoid big gaps initially
+                        if (inputId !== 'title' && inputId !== 'introduction') {
+                            // Only hide if the user hasn't typed anything yet to save space initially
+                            if (document.getElementById('introduction').value.trim() === '') {
+                                previewElement.classList.add('hidden');
+                            } else {
+                                previewElement.classList.remove('hidden');
+                            }
+                        }
+                    } else {
+                        previewElement.textContent = val;
+                        previewElement.classList.remove('text-slate-400', 'italic', 'hidden');
+                        previewElement.classList.add('text-slate-800');
+                        
+                        // If user starts typing, unhide subsequent placeholders to show structure
+                        unhideAllPreviews();
+                    }
+                });
+            }
+
+            function unhideAllPreviews() {
+                for (const previewId of Object.values(fieldMap)) {
+                    document.getElementById(previewId).classList.remove('hidden');
+                }
+            }
+        });
+
+        function copyToClipboard() {
+            // Gather text from inputs to create the clean essay
+            const studentName = document.getElementById('student-name').value.trim();
+            const studentClass = document.getElementById('student-class').value.trim();
+            const title = document.getElementById('title').value.trim();
+            const intro = document.getElementById('introduction').value.trim();
+            const body1 = document.getElementById('body1').value.trim();
+            const body2 = document.getElementById('body2').value.trim();
+            const eval = document.getElementById('evaluation').value.trim();
+            const concl = document.getElementById('conclusion').value.trim();
+
+            let fullText = "";
+            if (studentName || studentClass) {
+                if(studentName) fullText += "Name: " + studentName + "\n";
+                if(studentClass) fullText += "Class: " + studentClass + "\n";
+                fullText += "\n";
+            }
+            if(title) fullText += title + "\n\n";
+            if(intro) fullText += intro + "\n\n";
+            if(body1) fullText += body1 + "\n\n";
+            if(body2) fullText += body2 + "\n\n";
+            if(eval) fullText += eval + "\n\n";
+            if(concl) fullText += concl + "\n";
+
+            if (fullText.trim() === "") {
+                showToast("Nothing to copy yet!", "bg-yellow-500");
+                return;
+            }
+
+            // Fallback for older browsers / iframe restrictions
+            const textArea = document.createElement("textarea");
+            textArea.value = fullText;
+            
+            // Avoid scrolling to bottom
+            textArea.style.top = "0";
+            textArea.style.left = "0";
+            textArea.style.position = "fixed";
+
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showToast("✓ Copied to clipboard!", "bg-green-500");
+                } else {
+                    showToast("Failed to copy", "bg-red-500");
+                }
+            } catch (err) {
+                console.error('Fallback: Oops, unable to copy', err);
+                showToast("Failed to copy", "bg-red-500");
+            }
+
+            document.body.removeChild(textArea);
+        }
+
+        function showToast(message, bgColorClass) {
+            const toast = document.getElementById('copyToast');
+            toast.textContent = message;
+            
+            // Reset color classes
+            toast.classList.remove('bg-green-500', 'bg-red-500', 'bg-yellow-500');
+            toast.classList.add(bgColorClass);
+            
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
